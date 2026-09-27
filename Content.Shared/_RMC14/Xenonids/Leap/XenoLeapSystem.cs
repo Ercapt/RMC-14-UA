@@ -18,6 +18,9 @@ using Content.Shared._RMC14.Xenonids.Parasite;
 using Content.Shared._RMC14.Xenonids.Plasma;
 using Content.Shared._RMC14.Xenonids.Spray;
 using Content.Shared._RMC14.Xenonids.Weeds;
+// #Mriya
+using Content.Shared._Mriya.Xenonids.Leap;
+// #Mriya
 using Content.Shared.ActionBlocker;
 using Content.Shared.Coordinates;
 using Content.Shared.Damage;
@@ -188,8 +191,10 @@ public sealed class XenoLeapSystem : EntitySystem
         leaping.DestroyObjects = xeno.Comp.DestroyObjects;
         leaping.MoveDelayTime = xeno.Comp.MoveDelayTime;
         leaping.Damage = xeno.Comp.Damage;
+        // #Mriya
         leaping.WindowDamage = xeno.Comp.WindowDamage;
         leaping.WindowHitSound = xeno.Comp.WindowHitSound;
+        // #Mriya
         leaping.HitEffect = xeno.Comp.HitEffect;
         leaping.TargetJitterTime = xeno.Comp.TargetJitterTime;
         leaping.TargetCameraShakeStrength = xeno.Comp.TargetCameraShakeStrength;
@@ -524,6 +529,7 @@ public sealed class XenoLeapSystem : EntitySystem
         return true;
     }
 
+    // #Mriya
     private bool TryLeapDamageWindow(Entity<XenoLeapingComponent> xeno, EntityUid target)
     {
         if (xeno.Comp.WindowDamage.GetTotal() <= FixedPoint2.Zero)
@@ -548,11 +554,14 @@ public sealed class XenoLeapSystem : EntitySystem
         StopLeap(xeno);
         return true;
     }
+    // #Mriya
 
     private bool ApplyLeapingHitEffects(Entity<XenoLeapingComponent> xeno, EntityUid target)
     {
+        // #Mriya
         if (TryLeapDamageWindow(xeno, target))
             return true;
+        // #Mriya
 
         if (!IsValidLeapHit(xeno, target))
             return false;
