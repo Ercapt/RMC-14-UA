@@ -6,10 +6,12 @@
   placement:
     mode: SnapgridCenter
   components:
+  #Mriya
   - type: Tag
     tags:
     - Structure
     - AllowXenoConstruction
+  #Mriya
   - type: Sprite
     sprite: _RMC14/Structures/Machines/Science/chem_master.rsi
     layers:

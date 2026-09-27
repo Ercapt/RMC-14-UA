@@ -4,10 +4,12 @@
   parent: [ BaseMachinePowered, ConstructibleMachine ]
   description: Extracts seeds from produce.
   components:
+  #Mriya
   - type: Tag
     tags:
     - Structure
     - AllowXenoConstruction
+  #Mriya
   - type: Sprite
     sprite: Structures/Machines/seed_extractor.rsi
     snapCardinals: true

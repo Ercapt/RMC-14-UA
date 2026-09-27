@@ -5,10 +5,12 @@
   name: ящик
   description: Прямокутний металевий ящик. Надійно.
   components:
+  #Mriya
   - type: Tag
     tags:
     - Structure
     - AllowXenoConstruction
+  #Mriya
   - type: Transform
     noRot: true
   - type: Sprite

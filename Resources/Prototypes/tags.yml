@@ -21,8 +21,10 @@
 - type: Tag
   id: AllowGhostShownByEvent
 
+#Mriya
 - type: Tag
   id: AllowXenoConstruction
+#Mriya
 
 - type: Tag
   id: Ambrosia

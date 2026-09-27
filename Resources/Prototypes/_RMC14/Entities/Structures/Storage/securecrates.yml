@@ -202,10 +202,12 @@
   parent: BaseStructureDynamic
   id: RMCCrateOpenableBase
   components:
+  #Mriya
   - type: Tag
     tags:
     - Structure
     - AllowXenoConstruction
+  #Mriya
   - type: VehicleSmashable
   - type: CrateOpenable
     spawn:

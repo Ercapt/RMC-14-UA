@@ -72,7 +72,7 @@
   - type: Tag
     tags:
     - Structure
-    - AllowXenoConstruction
+    - AllowXenoConstruction #Mriya
 
 - type: entity
   id: ConveyorBeltAssembly

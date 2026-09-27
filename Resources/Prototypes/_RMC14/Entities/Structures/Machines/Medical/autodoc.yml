@@ -8,10 +8,12 @@
   placement:
     mode: SnapgridCenter
   components:
+  #Mriya
   - type: Tag
     tags:
     - Structure
     - AllowXenoConstruction
+  #Mriya
   - type: Transform
     anchored: true
   - type: Sprite
@@ -79,10 +81,12 @@
   placement:
     mode: SnapgridCenter
   components:
+  #Mriya
   - type: Tag
     tags:
     - Structure
     - AllowXenoConstruction
+  #Mriya
   - type: Transform
     anchored: true
   - type: Sprite

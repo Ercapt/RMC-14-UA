@@ -6,10 +6,12 @@
   name: НМА
   description: Надпровідний Магнітний Акамулятор (НМА).
   components:
+    #Mriya
     - type: Tag
       tags:
       - Structure
       - AllowXenoConstruction
+    #Mriya
     - type: GuideHelp
       guides:
       - RMCGuideRoleCombatTechnician

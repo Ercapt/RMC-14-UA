@@ -40,7 +40,7 @@
   - type: Tag
     tags:
     - ForceFixRotations
-    - AllowXenoConstruction
+    - AllowXenoConstruction #Mriya
 
 - type: entity
   id: CounterBase

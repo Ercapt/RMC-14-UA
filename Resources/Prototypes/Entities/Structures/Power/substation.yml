@@ -74,10 +74,12 @@
   placement:
     mode: SnapgridCenter
   components:
+  #Mriya
   - type: Tag
     tags:
     - Structure
     - AllowXenoConstruction
+  #Mriya
   - type: Sprite # TODO: add sprite for maintenance panel open
     sprite: Structures/Power/substation.rsi
     snapCardinals: true

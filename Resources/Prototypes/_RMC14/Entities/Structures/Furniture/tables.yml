@@ -116,7 +116,7 @@
   - type: Tag
     tags:
     - ForceFixRotations
-    - AllowXenoConstruction
+    - AllowXenoConstruction #Mriya
 
 # Reinforced
 - type: entity

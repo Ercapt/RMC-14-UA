@@ -4,10 +4,12 @@
   name: операційний стіл
   description: Використовується для складних медичних процедур.
   components:
+  #Mriya
   - type: Tag
     tags:
     - Structure
     - AllowXenoConstruction
+  #Mriya
   - type: Transform
     anchored: true
     noRot: true

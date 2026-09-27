@@ -4,10 +4,12 @@
   name: автостат
   description: Він може виробити безліч речей, але, тільки, якщо ви заправите його матеріалами.
   components:
+  #Mriya
   - type: Tag
     tags:
     - Structure
     - AllowXenoConstruction
+  #Mriya
   - type: ApcPowerReceiver
     powerLoad: 250
     needsPower: true

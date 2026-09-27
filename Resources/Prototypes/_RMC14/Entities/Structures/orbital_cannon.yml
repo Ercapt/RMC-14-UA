@@ -327,10 +327,12 @@
   placement:
     mode: SnapgridCenter
   components:
+  #Mriya
   - type: Tag
     tags:
     - RMCSeat
     - AllowXenoConstruction
+  #Mriya
   - type: Transform
     anchored: true
     rot: 90
