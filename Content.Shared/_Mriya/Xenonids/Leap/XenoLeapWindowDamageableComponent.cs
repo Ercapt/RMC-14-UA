@@ -1,4 +1,3 @@
-// #Mriya
 using Robust.Shared.GameStates;
 
 namespace Content.Shared._Mriya.Xenonids.Leap;
@@ -7,4 +6,4 @@ namespace Content.Shared._Mriya.Xenonids.Leap;
 public sealed partial class XenoLeapWindowDamageableComponent : Component
 {
 }
-// #Mriya
+
