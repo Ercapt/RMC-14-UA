@@ -139,6 +139,9 @@
     knockdownTime: 0
     range: 6
     moveDelayTime: 0
+    windowDamage:
+      types:
+        Blunt: 20
   - type: XenoShield
     shield: Praetorian
   - type: XenoAcidBall
@@ -322,6 +325,9 @@
     knockdownTime: 0
     range: 6
     moveDelayTime: 0
+    windowDamage:
+      types:
+        Blunt: 20
   - type: XenoBlitz
     damage:
       groups:

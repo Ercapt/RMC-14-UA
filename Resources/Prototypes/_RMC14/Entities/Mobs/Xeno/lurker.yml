@@ -118,6 +118,9 @@
     leapSound: /Audio/_RMC14/Xeno/alien_pounce.ogg
     knockdownRequiresInvisibility: true
     unrootOnMelee: true
+    windowDamage:
+      types:
+        Blunt: 14
   - type: XenoTurnInvisible
   - type: XenoCripplingStrike
     removeOnHit: true
@@ -174,6 +177,9 @@
     damage:
       groups:
         Brute: 40
+    windowDamage:
+      types:
+        Blunt: 14
   - type: XenoTailJab
     attackEffect: RMCEffectTailHit
     damage:

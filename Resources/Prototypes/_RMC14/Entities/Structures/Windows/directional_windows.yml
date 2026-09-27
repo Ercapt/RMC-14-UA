@@ -56,6 +56,7 @@
   - type: Construction
     graph: RMCWindowDirectional
     node: windowDirectional
+  - type: XenoLeapWindowDamageable
 
 - type: entity
   parent: CMWindowDirectional

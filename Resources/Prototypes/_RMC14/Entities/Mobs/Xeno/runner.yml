@@ -164,6 +164,9 @@
     delay: 0
     knockdownTime: 2
     leapSound: /Audio/_RMC14/Xeno/alien_pounce.ogg
+    windowDamage:
+      types:
+        Blunt: 8
   - type: MovementSpeedModifier
     baseWalkSpeed: 5.55
     baseSprintSpeed: 10

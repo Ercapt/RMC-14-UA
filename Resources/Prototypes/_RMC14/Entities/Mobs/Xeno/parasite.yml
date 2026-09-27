@@ -70,6 +70,9 @@
   - type: XenoAnimateMovement
   - type: XenoLeap
     knockdownTime: 1
+    windowDamage:
+      types:
+        Blunt: 4.5
   - type: AcidBloodSplash
     damage:
       types:

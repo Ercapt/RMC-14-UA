@@ -43,6 +43,12 @@ public sealed partial class XenoLeapingComponent : Component
     public DamageSpecifier Damage = new();
 
     [DataField, AutoNetworkedField]
+    public DamageSpecifier WindowDamage = new();
+
+    [DataField, AutoNetworkedField]
+    public SoundSpecifier? WindowHitSound;
+
+    [DataField, AutoNetworkedField]
     public EntProtoId? HitEffect;
 
     [DataField, AutoNetworkedField]
