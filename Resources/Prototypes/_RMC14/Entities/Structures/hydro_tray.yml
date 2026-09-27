@@ -37,6 +37,9 @@
           collection: MetalGlassBreak
       - !type:DoActsBehavior
         acts: ["Destruction"]
+  #Mriya
+  - type: Corrodible
+  #Mriya
   - type: Sprite
     sprite: _RMC14/Structures/hydroponics.rsi
     layers:

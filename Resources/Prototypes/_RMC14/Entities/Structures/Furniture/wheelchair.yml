@@ -2,8 +2,9 @@
   abstract: true
   id: RMCWheelchairBase
   components:
+  #Mriya
   - type: Corrodible
-    isCorrodible: false
+  #Mriya
   - type: Sprite
     drawdepth: Objects
     noRot: true
