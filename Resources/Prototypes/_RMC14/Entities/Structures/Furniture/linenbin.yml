@@ -6,6 +6,10 @@
   description: кошик для білизни. Виглядає досить затишним.
   components:
   - type: Anchorable
+  - type: Tag
+    tags:
+    - Structure
+    - AllowXenoConstruction
   - type: Transform
     anchored: true
   - type: Physics

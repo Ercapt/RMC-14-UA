@@ -153,6 +153,10 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: Tag
+    tags:
+    - RMCSeat
+    - AllowXenoConstruction
   - type: Sprite
     state: comfychair
   - type: Transform

@@ -29,6 +29,7 @@
   - type: Tag
     tags:
     - Structure
+    - AllowXenoConstruction
   #    offState: off
   #    brokenState: broken
   - type: Sprite

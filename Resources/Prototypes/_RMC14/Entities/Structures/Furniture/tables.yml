@@ -116,6 +116,7 @@
   - type: Tag
     tags:
     - ForceFixRotations
+    - AllowXenoConstruction
 
 # Reinforced
 - type: entity

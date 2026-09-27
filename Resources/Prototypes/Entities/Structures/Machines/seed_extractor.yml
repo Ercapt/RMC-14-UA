@@ -4,6 +4,10 @@
   parent: [ BaseMachinePowered, ConstructibleMachine ]
   description: Extracts seeds from produce.
   components:
+  - type: Tag
+    tags:
+    - Structure
+    - AllowXenoConstruction
   - type: Sprite
     sprite: Structures/Machines/seed_extractor.rsi
     snapCardinals: true

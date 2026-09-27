@@ -4,6 +4,10 @@
   name: смітник
   description: Пневматичний пристрій для збирання відходів.
   components:
+  - type: Tag
+    tags:
+    - Structure
+    - AllowXenoConstruction
   - type: VehicleSmashable
   - type: Sprite
     sprite: _RMC14/Structures/Piping/disposal.rsi

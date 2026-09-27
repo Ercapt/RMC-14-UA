@@ -6,6 +6,10 @@
   description: It's a basic storage unit.
   suffix: Unanchored
   components:
+  - type: Tag
+    tags:
+    - Structure
+    - AllowXenoConstruction
   - type: Physics
     bodyType: Static
   - type: Sprite

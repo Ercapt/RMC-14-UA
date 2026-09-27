@@ -22,6 +22,9 @@
   id: AllowGhostShownByEvent
 
 - type: Tag
+  id: AllowXenoConstruction
+
+- type: Tag
   id: Ambrosia
 
 - type: Tag

@@ -5,6 +5,10 @@
   name: ящик
   description: Прямокутний металевий ящик. Надійно.
   components:
+  - type: Tag
+    tags:
+    - Structure
+    - AllowXenoConstruction
   - type: Transform
     noRot: true
   - type: Sprite

@@ -8,6 +8,10 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: Tag
+    tags:
+    - Structure
+    - AllowXenoConstruction
   - type: Transform
     anchored: true
   - type: Sprite
@@ -75,6 +79,10 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: Tag
+    tags:
+    - Structure
+    - AllowXenoConstruction
   - type: Transform
     anchored: true
   - type: Sprite

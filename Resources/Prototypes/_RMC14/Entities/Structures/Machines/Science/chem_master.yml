@@ -6,6 +6,10 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: Tag
+    tags:
+    - Structure
+    - AllowXenoConstruction
   - type: Sprite
     sprite: _RMC14/Structures/Machines/Science/chem_master.rsi
     layers:

@@ -4,6 +4,10 @@
   name: автостат
   description: Він може виробити безліч речей, але, тільки, якщо ви заправите його матеріалами.
   components:
+  - type: Tag
+    tags:
+    - Structure
+    - AllowXenoConstruction
   - type: ApcPowerReceiver
     powerLoad: 250
     needsPower: true

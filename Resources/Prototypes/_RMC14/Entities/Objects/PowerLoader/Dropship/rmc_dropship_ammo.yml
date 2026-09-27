@@ -3,6 +3,10 @@
   parent: RMCDropshipAttachmentBase
   id: RMCDropshipAttachmentAmmo
   components:
+  - type: Tag
+    tags:
+    - Structure
+    - AllowXenoConstruction
   - type: Sprite
     sprite: _RMC14/Objects/dropship_ammo.rsi
   - type: DropshipFabricatorPrintable

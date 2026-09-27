@@ -4,6 +4,10 @@
   name: факс-апарат
   description: Єдиний та найкращий друг Корпората.
   components:
+  - type: Tag
+    tags:
+    - Structure
+    - AllowXenoConstruction
   - type: ApcPowerReceiver
     powerLoad: 250
     needsPower: true

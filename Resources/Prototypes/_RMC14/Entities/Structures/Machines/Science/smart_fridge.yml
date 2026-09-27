@@ -6,6 +6,10 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: Tag
+    tags:
+    - Structure
+    - AllowXenoConstruction
   - type: Sprite
     sprite: _RMC14/Structures/Machines/smart_fridge.rsi # TODO RMC14 deny, vend states
     layers:

@@ -41,6 +41,10 @@
   description: Консоль керування Автоматичною Транспортно-Складською Системою.
   suffix: Requisitions
   components:
+  - type: Tag
+    tags:
+    - Structure
+    - AllowXenoConstruction
   - type: Sprite
     sprite: _RMC14/Structures/Machines/asrs_console.rsi
     layers:

@@ -3,6 +3,11 @@
   id: RMCBookcase
   name: книжкова шафа
   components:
+  - type: Tag
+    tags:
+    - Structure
+    - Wooden
+    - AllowXenoConstruction
   - type: Sprite
     sprite: _RMC14/Structures/Furniture/bookshelf.rsi
     snapCardinals: true
