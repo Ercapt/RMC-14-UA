@@ -56,9 +56,9 @@
   - type: Construction
     graph: RMCWindowDirectional
     node: windowDirectional
-  #Mriya 
+  #Mriya start
   - type: XenoLeapWindowDamageable
-  #Mriya 
+  #Mriya end
 
 - type: entity
   parent: CMWindowDirectional

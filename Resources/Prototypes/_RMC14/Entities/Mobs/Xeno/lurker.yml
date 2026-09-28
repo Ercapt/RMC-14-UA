@@ -118,11 +118,11 @@
     leapSound: /Audio/_RMC14/Xeno/alien_pounce.ogg
     knockdownRequiresInvisibility: true
     unrootOnMelee: true
-    #Mriya 
+    #Mriya start
     windowDamage:
       types:
-        Blunt: 14
-    #Mriya 
+        Blunt: 25
+    #Mriya end
   - type: XenoTurnInvisible
   - type: XenoCripplingStrike
     removeOnHit: true
@@ -179,11 +179,11 @@
     damage:
       groups:
         Brute: 40
-    #Mriya 
+    #Mriya start
     windowDamage:
       types:
-        Blunt: 14
-    #Mriya 
+        Blunt: 25
+    #Mriya end
   - type: XenoTailJab
     attackEffect: RMCEffectTailHit
     damage:

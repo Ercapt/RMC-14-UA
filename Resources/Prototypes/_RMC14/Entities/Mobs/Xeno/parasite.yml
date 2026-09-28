@@ -70,11 +70,11 @@
   - type: XenoAnimateMovement
   - type: XenoLeap
     knockdownTime: 1
-    #Mriya 
+    #Mriya start
     windowDamage:
       types:
-        Blunt: 4.5
-    #Mriya 
+        Blunt: 5
+    #Mriya end
   - type: AcidBloodSplash
     damage:
       types:
