@@ -4,6 +4,12 @@
   name: вікно
   description: Скляне вікно. Воно виглядає тонким і крихким. Кілька ударів чим-небудь розіб'ють його.
   components:
+  # Mriya start
+  - type: Tag
+    tags:
+    - Window
+    - AllowXenoConstruction
+  # Mriya end
   - type: Transform
     anchored: true
   - type: Fixtures
