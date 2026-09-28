@@ -12,7 +12,7 @@
   - type: Sprite
     sprite: _RMC14/Structures/basketball_hoop.rsi
     state: hoop
-  #Mriya
+  # Mriya start
   - type: Damageable
     damageContainer: StructuralMarine
     damageModifierSet: StructuralMarine
@@ -33,7 +33,7 @@
       - !type:DoActsBehavior
         acts: ["Destruction"]
   - type: Corrodible
-  #Mriya
+  # Mriya end
 
 - type: entity
   parent: RMCBasketballHoop

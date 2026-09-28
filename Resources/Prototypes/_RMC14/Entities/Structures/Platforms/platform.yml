@@ -13,9 +13,9 @@
   - type: Clickable
   - type: Climbable
     delay: 0.25
-  #Mriya
+  # Mriya start
   - type: Corrodible
-  #Mriya
+  # Mriya end
   - type: Tag
     tags:
     - Platform
@@ -33,9 +33,9 @@
     drawdepth: HighFloorObjects
   - type: InteractionOutline
   - type: Clickable
-  #Mriya
+  # Mriya start
   - type: Corrodible
-  #Mriya
+  # Mriya end
 
 - type: entity
   abstract: true
@@ -44,22 +44,24 @@
   components:
   - type: Damageable
     damageContainer: Inorganic
+  # Mriya start
   - type: Destructible
     thresholds:
       - trigger:
           !type:DamageTrigger
-          damage: 110 # Excessive damage
+          damage: 30 # Mriya | Зменшення потрібної шкоди з 110
         behaviors:
           - !type:DoActsBehavior
             acts: ["Destruction"]
       - trigger:
           !type:DamageTrigger
-          damage: 90
+          damage: 20 # Mriya | Зменшення потрібної шкоди з 90
         behaviors:
           - !type:ChangeConstructionNodeBehavior
             node: platformBroken
           - !type:DoActsBehavior
             acts: ["Breakage"]
+  # Mriya end
 
 - type: entity
   parent: CMPlatformBaseBroken
@@ -153,22 +155,24 @@
   - type: Physics
   - type: Damageable
     damageContainer: Inorganic
+  # Mriya start
   - type: Destructible
     thresholds:
       - trigger:
           !type:DamageTrigger
-          damage: 45 # Excessive damage
+          damage: 30 # Mriya | Зменшення потрібної шкоди з 45
         behaviors:
           - !type:DoActsBehavior
             acts: ["Destruction"]
       - trigger:
           !type:DamageTrigger
-          damage: 30
+          damage: 20 # Mriya | Зменшення потрібної шкоди з 30
         behaviors:
           - !type:ChangeConstructionNodeBehavior
             node: platformBroken
           - !type:DoActsBehavior
             acts: ["Breakage"]
+  # Mriya end
   - type: Fixtures
     fixtures:
       fix1:
@@ -197,22 +201,24 @@
   - type: Physics
   - type: Damageable
     damageContainer: Inorganic
+  # Mriya start
   - type: Destructible
     thresholds:
       - trigger:
           !type:DamageTrigger
-          damage: 135 # Excessive damage
+          damage: 30 # Mriya | Зменшення потрібної шкоди з 135
         behaviors:
           - !type:DoActsBehavior
             acts: ["Destruction"]
       - trigger:
           !type:DamageTrigger
-          damage: 110
+          damage: 20 # Mriya | Зменшення потрібної шкоди з 110
         behaviors:
           - !type:ChangeConstructionNodeBehavior
             node: platformBroken
           - !type:DoActsBehavior
             acts: ["Breakage"]
+  # Mriya end
   - type: Fixtures
     fixtures:
       fix1:

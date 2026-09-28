@@ -13,7 +13,7 @@
     sprite: _RMC14/Structures/alien_autopsy.rsi
     state: jarshelf_9
   - type: Appearance
-  #Mriya
+  # Mriya start
   - type: Damageable
     damageContainer: StructuralMarine
     damageModifierSet: StructuralMarine
@@ -34,7 +34,7 @@
       - !type:DoActsBehavior
         acts: ["Destruction"]
   - type: Corrodible
-  #Mriya
+  # Mriya end
   - type: Fixtures
     fixtures:
       fix1:
@@ -63,9 +63,9 @@
   - type: Damageable
     damageContainer: StructuralMarine
     damageModifierSet: StructuralMarine
-  #Mriya
+  # Mriya start
   - type: Corrodible
-  #Mriya
+  # Mriya end
   - type: InteractionOutline
 
 - type: entity
