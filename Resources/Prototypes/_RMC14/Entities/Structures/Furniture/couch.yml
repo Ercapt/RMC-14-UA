@@ -17,11 +17,11 @@
     sprite: _RMC14/Structures/Furniture/Couches/couch.rsi
     state: couch_mid
   - type: RMCMesonsNonviewable
-  #Mriya
+  # Mriya start
   - type: Tag
     tags:
     - AllowXenoConstruction
-  #Mriya
+  # Mriya end
   - type: Damageable
     damageContainer: StructuralMarine
     damageModifierSet: StructuralMarine

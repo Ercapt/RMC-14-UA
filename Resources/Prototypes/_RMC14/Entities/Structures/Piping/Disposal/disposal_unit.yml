@@ -4,12 +4,12 @@
   name: смітник
   description: Пневматичний пристрій для збирання відходів.
   components:
-  #Mriya
+  # Mriya start
   - type: Tag
     tags:
     - Structure
     - AllowXenoConstruction
-  #Mriya
+  # Mriya end
   - type: VehicleSmashable
   - type: Sprite
     sprite: _RMC14/Structures/Piping/disposal.rsi

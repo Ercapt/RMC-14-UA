@@ -2154,12 +2154,12 @@
   name: gas tank dispenser
   description: A vendor for dispensing gas tanks.
   components:
-  #Mriya
+  # Mriya start
   - type: Tag
     tags:
     - Structure
     - AllowXenoConstruction
-  #Mriya
+  # Mriya end
   - type: VendingMachine
     pack: TankDispenserEVAInventory
   - type: Sprite
@@ -2173,12 +2173,12 @@
   name: gas tank dispenser
   description: A vendor for dispensing gas tanks. This one has an engineering livery.
   components:
-  #Mriya
+  # Mriya start
   - type: Tag
     tags:
     - Structure
     - AllowXenoConstruction
-  #Mriya
+  # Mriya end
   - type: VendingMachine
     pack: TankDispenserEngineeringInventory
   - type: Sprite

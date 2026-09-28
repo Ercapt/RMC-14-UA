@@ -137,12 +137,12 @@
   name: displaced
   suffix: Girder
   components:
-  #Mriya
+  # Mriya start
   - type: Tag
     tags:
     - Structure
     - AllowXenoConstruction
-  #Mriya
+  # Mriya end
   - type: Transform
     anchored: false
   - type: Sprite

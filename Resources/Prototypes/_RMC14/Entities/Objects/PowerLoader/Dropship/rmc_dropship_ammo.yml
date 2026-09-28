@@ -3,12 +3,12 @@
   parent: RMCDropshipAttachmentBase
   id: RMCDropshipAttachmentAmmo
   components:
-  #Mriya
+  # Mriya start
   - type: Tag
     tags:
     - Structure
     - AllowXenoConstruction
-  #Mriya
+  # Mriya end
   - type: Sprite
     sprite: _RMC14/Objects/dropship_ammo.rsi
   - type: DropshipFabricatorPrintable

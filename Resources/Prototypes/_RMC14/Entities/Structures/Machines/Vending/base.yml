@@ -29,7 +29,9 @@
   - type: Tag
     tags:
     - Structure
-    - AllowXenoConstruction #Mriya
+    # Mriya start
+    - AllowXenoConstruction
+    # Mriya end
   #    offState: off
   #    brokenState: broken
   - type: Sprite

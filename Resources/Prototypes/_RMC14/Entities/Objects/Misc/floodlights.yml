@@ -4,12 +4,12 @@
   name: small floodlight
   description: A small bit of light in the darkness.
   components:
-  #Mriya
+  # Mriya start
   - type: Tag
     tags:
     - Structure
     - AllowXenoConstruction
-  #Mriya
+  # Mriya end
   - type: VehicleSmashable
   - type: Transform
     anchored: true
@@ -88,12 +88,12 @@
   placement:
     mode: SnapgridCenter
   components:
-  #Mriya
+  # Mriya start
   - type: Tag
     tags:
     - Structure
     - AllowXenoConstruction
-  #Mriya
+  # Mriya end
   - type: Transform
     anchored: true
   - type: Physics

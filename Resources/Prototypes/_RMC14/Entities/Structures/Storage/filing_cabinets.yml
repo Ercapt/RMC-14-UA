@@ -5,12 +5,12 @@
   description: A large cabinet with drawers.
   suffix: Empty
   components:
-  #Mriya
+  # Mriya start
   - type: Tag
     tags:
     - Structure
     - AllowXenoConstruction
-  #Mriya
+  # Mriya end
   - type: Storage
     grid:
     - 0,0,9,3

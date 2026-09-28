@@ -5,12 +5,12 @@
   placement:
     mode: SnapgridCenter
   components:
-  #Mriya
+  # Mriya start
   - type: Tag
     tags:
     - Structure
     - AllowXenoConstruction
-  #Mriya
+  # Mriya end
   - type: MeleeSound
     soundGroups:
       Brute:

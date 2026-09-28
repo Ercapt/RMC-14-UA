@@ -5,12 +5,6 @@
   name: crate
   description: A large container for items.
   components:
-  #Mriya
-  - type: Tag
-    tags:
-    - Structure
-    - AllowXenoConstruction
-  #Mriya
   - type: Animateable
   - type: Transform
     noRot: true
