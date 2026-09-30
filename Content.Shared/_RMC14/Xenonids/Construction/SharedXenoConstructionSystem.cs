@@ -1793,7 +1793,7 @@ public sealed class SharedXenoConstructionSystem : EntitySystem
                 return false;
             }
 
-            // Mriya start. Додано (!_tags.HasTag(uid.Value, AllowXenoConstructionTag) && для будівництва на об'єктах з вайтлистом.
+            // Mriya start. Додано `(!_tags.HasTag(uid.Value, AllowXenoConstructionTag) &&` для будівництва на об'єктах з вайтлистом.
             if (!_tags.HasTag(uid.Value, AllowXenoConstructionTag) &&
                 (HasComp<XenoConstructComponent>(uid) ||
                 _tags.HasAnyTag(uid.Value, StructureTag, AirlockTag) ||
