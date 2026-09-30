@@ -3,7 +3,7 @@
   id: RMCWheelchairBase
   components:
   - type: Corrodible
-  # isCorrodible: false | Mriya. Прибрано, бо це блокує кислоту.
+  #isCorrodible: false – Mriya. Додано можливість плавити
   - type: Sprite
     drawdepth: Objects
     noRot: true

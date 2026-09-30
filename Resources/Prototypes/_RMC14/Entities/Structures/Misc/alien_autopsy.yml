@@ -13,7 +13,7 @@
     sprite: _RMC14/Structures/alien_autopsy.rsi
     state: jarshelf_9
   - type: Appearance
-  # Mriya start
+  # Mriya start. Додано можливість ламати
   - type: Damageable
     damageContainer: StructuralMarine
     damageModifierSet: StructuralMarine
@@ -63,7 +63,7 @@
   - type: Damageable
     damageContainer: StructuralMarine
     damageModifierSet: StructuralMarine
-  - type: Corrodible # Mriya. Додано компонент для плавлення.
+  - type: Corrodible # Mriya. Додано можливість плавити
   - type: InteractionOutline
 
 - type: entity

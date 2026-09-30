@@ -13,7 +13,7 @@
   - type: Clickable
   - type: Climbable
     delay: 0.25
-  - type: Corrodible # Mriya. Додано компонент для плавлення.
+  - type: Corrodible # Mriya. Додано можливість плавити
   - type: Tag
     tags:
     - Platform
@@ -31,7 +31,7 @@
     drawdepth: HighFloorObjects
   - type: InteractionOutline
   - type: Clickable
-  - type: Corrodible # Mriya. Додано компонент для плавлення.
+  - type: Corrodible # Mriya. Додано можливість плавити
 
 - type: entity
   abstract: true
@@ -44,13 +44,13 @@
     thresholds:
       - trigger:
           !type:DamageTrigger
-          damage: 30 # Mriya | Зменшення потрібної шкоди з 110
+          damage: 30 # Mriya. В оригіналі 110. Зменшення необхідної шкоди
         behaviors:
           - !type:DoActsBehavior
             acts: ["Destruction"]
       - trigger:
           !type:DamageTrigger
-          damage: 20 # Mriya | Зменшення потрібної шкоди з 90
+          damage: 20 # Mriya. В оригіналі 90. Зменшення необхідної шкоди
         behaviors:
           - !type:ChangeConstructionNodeBehavior
             node: platformBroken
@@ -153,13 +153,13 @@
     thresholds:
       - trigger:
           !type:DamageTrigger
-          damage: 30 # Mriya | Зменшення потрібної шкоди з 45
+          damage: 30 # Mriya. В оригіналі 45. Зменшення необхідної шкоди
         behaviors:
           - !type:DoActsBehavior
             acts: ["Destruction"]
       - trigger:
           !type:DamageTrigger
-          damage: 20 # Mriya | Зменшення потрібної шкоди з 30
+          damage: 20 # Mriya. В оригіналі 30. Зменшення необхідної шкоди
         behaviors:
           - !type:ChangeConstructionNodeBehavior
             node: platformBroken
@@ -197,13 +197,13 @@
     thresholds:
       - trigger:
           !type:DamageTrigger
-          damage: 30 # Mriya | Зменшення потрібної шкоди з 135
+          damage: 30 # Mriya. В оригіналі 135. Зменшення необхідної шкоди
         behaviors:
           - !type:DoActsBehavior
             acts: ["Destruction"]
       - trigger:
           !type:DamageTrigger
-          damage: 20 # Mriya | Зменшення потрібної шкоди з 110
+          damage: 20 # Mriya. В оригіналі 110. Зменшення необхідної шкоди
         behaviors:
           - !type:ChangeConstructionNodeBehavior
             node: platformBroken

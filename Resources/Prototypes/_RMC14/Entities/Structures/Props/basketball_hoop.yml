@@ -12,7 +12,7 @@
   - type: Sprite
     sprite: _RMC14/Structures/basketball_hoop.rsi
     state: hoop
-  # Mriya start
+  # Mriya start. Додано можливість ламати
   - type: Damageable
     damageContainer: StructuralMarine
     damageModifierSet: StructuralMarine

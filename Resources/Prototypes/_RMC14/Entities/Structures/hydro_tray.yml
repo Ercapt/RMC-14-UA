@@ -5,7 +5,7 @@
   description: Used for growing plants.
   components:
   - type: VehicleSmashable
-  # Mriya start | Колізія видалена
+  # Mriya start. Прибирання колізії
   #  - type: Fixtures
   #    fixtures:
   #      fix1:
@@ -40,7 +40,7 @@
           collection: MetalGlassBreak
       - !type:DoActsBehavior
         acts: ["Destruction"]
-  - type: Corrodible # Mriya. Додано компонент для плавлення.
+  - type: Corrodible # Mriya. Додано компонент для плавлення. Додано можливість плавити
   - type: Sprite
     sprite: _RMC14/Structures/hydroponics.rsi
     layers:
