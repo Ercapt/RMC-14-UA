@@ -3,7 +3,7 @@
   parent: RMCDropshipAttachmentBase
   id: RMCDropshipAttachmentAmmo
   components:
-  # Mriya start
+  # Mriya start. Можливість будувати на ньому
   - type: Tag
     tags:
     - Structure
