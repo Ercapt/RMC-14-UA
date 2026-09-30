@@ -40,9 +40,7 @@
   description: Медичний дозатор лікарських засобів. Постачається Фармацевтичним відділом корпорації Ве-Я.
   suffix: All Access
   components:
-  # Mriya start
-  - type: Corrodible
-  # Mriya end
+  - type: Corrodible # Mriya. Додано компонент для плавлення.
   - type: Sprite
     sprite: _RMC14/Structures/Machines/VendingMachines/med.rsi
     layers:
