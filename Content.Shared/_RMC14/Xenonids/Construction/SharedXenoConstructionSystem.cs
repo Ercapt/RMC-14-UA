@@ -1452,7 +1452,7 @@ public sealed class SharedXenoConstructionSystem : EntitySystem
             {
                 if ((_tags.HasAnyTag(uid.Value, StructureTag) || HasComp<StrapComponent>(uid) || HasComp<ClimbableComponent>(uid)) &&
                     !_tags.HasTag(uid.Value, PlatformTag) &&
-                    // Mriya start. Додано !_tags.HasTag(uid.Value, AllowXenoConstructionTag) для будівництва на об'єктах з вайтлистом.
+                    // Mriya start. Для будівництва на об'єктах з вайтлистом.
                     !_tags.HasTag(uid.Value, AllowXenoConstructionTag) &&
                     // Mriya end
                     !HasComp<DoorComponent>(uid) ||
