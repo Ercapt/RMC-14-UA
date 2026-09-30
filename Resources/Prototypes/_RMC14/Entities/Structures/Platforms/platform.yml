@@ -13,9 +13,7 @@
   - type: Clickable
   - type: Climbable
     delay: 0.25
-  # Mriya start
-  - type: Corrodible
-  # Mriya end
+  - type: Corrodible # Mriya. Додано компонент для плавлення.
   - type: Tag
     tags:
     - Platform
@@ -33,9 +31,7 @@
     drawdepth: HighFloorObjects
   - type: InteractionOutline
   - type: Clickable
-  # Mriya start
-  - type: Corrodible
-  # Mriya end
+  - type: Corrodible # Mriya. Додано компонент для плавлення.
 
 - type: entity
   abstract: true
@@ -44,7 +40,6 @@
   components:
   - type: Damageable
     damageContainer: Inorganic
-  # Mriya start
   - type: Destructible
     thresholds:
       - trigger:
@@ -61,7 +56,6 @@
             node: platformBroken
           - !type:DoActsBehavior
             acts: ["Breakage"]
-  # Mriya end
 
 - type: entity
   parent: CMPlatformBaseBroken
@@ -155,7 +149,6 @@
   - type: Physics
   - type: Damageable
     damageContainer: Inorganic
-  # Mriya start
   - type: Destructible
     thresholds:
       - trigger:
@@ -172,7 +165,6 @@
             node: platformBroken
           - !type:DoActsBehavior
             acts: ["Breakage"]
-  # Mriya end
   - type: Fixtures
     fixtures:
       fix1:
@@ -201,7 +193,6 @@
   - type: Physics
   - type: Damageable
     damageContainer: Inorganic
-  # Mriya start
   - type: Destructible
     thresholds:
       - trigger:
@@ -218,7 +209,6 @@
             node: platformBroken
           - !type:DoActsBehavior
             acts: ["Breakage"]
-  # Mriya end
   - type: Fixtures
     fixtures:
       fix1:
