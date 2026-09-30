@@ -5,6 +5,12 @@
   name: sign
   description: A sign.
   components:
+  # Mriya start
+  - type: Tag
+    tags:
+    - Structure
+    - AllowXenoConstruction
+  # Mriya end
   - type: Transform
     anchored: false
   - type: Physics

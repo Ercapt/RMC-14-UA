@@ -92,7 +92,7 @@ public sealed class SharedXenoConstructionSystem : EntitySystem
     private static readonly ProtoId<TagPrototype> AirlockTag = "Airlock";
     private static readonly ProtoId<TagPrototype> StructureTag = "Structure";
     private static readonly ProtoId<TagPrototype> PlatformTag = "Platform";
-    // Mriya start
+    // Mriya start. Тег-вайтлист AllowXenoConstruction для дозволу будівництва на об'єктах.
     private static readonly ProtoId<TagPrototype> AllowXenoConstructionTag = "AllowXenoConstruction";
     // Mriya end
 
@@ -1452,7 +1452,7 @@ public sealed class SharedXenoConstructionSystem : EntitySystem
             {
                 if ((_tags.HasAnyTag(uid.Value, StructureTag) || HasComp<StrapComponent>(uid) || HasComp<ClimbableComponent>(uid)) &&
                     !_tags.HasTag(uid.Value, PlatformTag) &&
-                    // Mriya start
+                    // Mriya start. Додано !_tags.HasTag(uid.Value, AllowXenoConstructionTag) для будівництва на об'єктах з вайтлистом.
                     !_tags.HasTag(uid.Value, AllowXenoConstructionTag) &&
                     // Mriya end
                     !HasComp<DoorComponent>(uid) ||
@@ -1793,7 +1793,7 @@ public sealed class SharedXenoConstructionSystem : EntitySystem
                 return false;
             }
 
-            // Mriya start
+            // Mriya start. Додано (!_tags.HasTag(uid.Value, AllowXenoConstructionTag) && для будівництва на об'єктах з вайтлистом.
             if (!_tags.HasTag(uid.Value, AllowXenoConstructionTag) &&
                 (HasComp<XenoConstructComponent>(uid) ||
                 _tags.HasAnyTag(uid.Value, StructureTag, AirlockTag) ||

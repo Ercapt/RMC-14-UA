@@ -9,6 +9,12 @@
     snap:
     - Disposal
   components:
+  # Mriya start
+  - type: Tag
+    tags:
+    - RMCSeat
+    - AllowXenoConstruction
+  # Mriya end
   - type: Anchorable
     flags:
     - Anchorable

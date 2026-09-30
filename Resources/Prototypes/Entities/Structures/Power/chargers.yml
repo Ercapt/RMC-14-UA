@@ -73,6 +73,12 @@
   id: PowerCellRecharger
   name: cell recharger
   components:
+  # Mriya start
+  - type: Tag
+    tags:
+    - Structure
+    - AllowXenoConstruction
+  # Mriya end
   - type: Sprite
     sprite: Structures/Power/cell_recharger.rsi
     layers:

@@ -4,6 +4,12 @@
   name: meat spike
   description: A spike for collecting meat from animals.
   components:
+  # Mriya start
+  - type: Tag
+    tags:
+    - Structure
+    - AllowXenoConstruction
+  # Mriya end
   - type: InteractionOutline
   - type: Sprite
     # temp to make clickmask work
