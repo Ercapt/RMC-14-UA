@@ -4,7 +4,7 @@
   name: автостат
   description: Він може виробити безліч речей, але, тільки, якщо ви заправите його матеріалами.
   components:
-  # Mriya start
+  # Mriya start. Можливість будувати на ньому
   - type: Tag
     tags:
     - Structure

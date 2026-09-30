@@ -5,7 +5,7 @@
   name: fence
   description: A large metal mesh strewn between two poles. Intended as a cheap way to separate areas, while allowing one to see through it.
   components:
-  # Mriya start
+  # Mriya start. Можливість будувати на ньому
   - type: Tag
     tags:
     - Structure

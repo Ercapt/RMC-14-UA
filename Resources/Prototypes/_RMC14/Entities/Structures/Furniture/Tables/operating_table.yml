@@ -4,7 +4,7 @@
   name: операційний стіл
   description: Використовується для складних медичних процедур.
   components:
-  # Mriya start
+  # Mriya start. Можливість будувати на ньому
   - type: Tag
     tags:
     - Structure

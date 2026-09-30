@@ -29,7 +29,7 @@
   - type: Tag
     tags:
     - Structure
-    # Mriya start
+    # Mriya start. Можливість будувати на ньому
     - AllowXenoConstruction
     # Mriya end
   #    offState: off

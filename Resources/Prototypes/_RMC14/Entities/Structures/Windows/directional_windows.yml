@@ -4,7 +4,7 @@
   name: вікно
   description: Скляне вікно. Воно виглядає тонким і крихким. Кілька ударів чим-небудь розіб'ють його.
   components:
-  # Mriya start
+  # Mriya start. Можливість будувати на ньому
   - type: Tag
     tags:
     - Window

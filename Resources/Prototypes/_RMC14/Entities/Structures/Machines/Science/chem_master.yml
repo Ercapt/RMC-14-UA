@@ -6,7 +6,7 @@
   placement:
     mode: SnapgridCenter
   components:
-  # Mriya start
+  # Mriya start. Можливість будувати на ньому
   - type: Tag
     tags:
     - Structure

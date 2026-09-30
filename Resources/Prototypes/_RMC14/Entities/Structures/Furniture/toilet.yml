@@ -9,7 +9,7 @@
     snap:
     - Disposal
   components:
-  # Mriya start
+  # Mriya start. Можливість будувати на ньому
   - type: Tag
     tags:
     - RMCSeat

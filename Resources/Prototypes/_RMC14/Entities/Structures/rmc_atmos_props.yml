@@ -86,7 +86,7 @@
   name: portable air pump
   description: A movable pump that can move air around.
   components:
-  # Mriya start
+  # Mriya start. Можливість будувати на ньому
   - type: Tag
     tags:
     - Structure

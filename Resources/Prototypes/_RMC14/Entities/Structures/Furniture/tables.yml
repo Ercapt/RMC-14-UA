@@ -5,7 +5,7 @@
   name: стіл
   description: Квадратна металева поверхня, що стоїть на чотирьох ніжках. Зручно класти на неї речі.
   components:
-  # Mriya start
+  # Mriya start. Можливість будувати на ньому
   - type: Tag
     tags:
     - ForceFixRotations
