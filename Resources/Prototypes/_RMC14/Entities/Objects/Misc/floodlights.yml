@@ -4,7 +4,7 @@
   name: small floodlight
   description: A small bit of light in the darkness.
   components:
-  # Mriya start
+  # Mriya start. Можливість будувати на ньому
   - type: Tag
     tags:
     - Structure
