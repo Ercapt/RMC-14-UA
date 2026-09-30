@@ -63,9 +63,7 @@
   - type: Damageable
     damageContainer: StructuralMarine
     damageModifierSet: StructuralMarine
-  # Mriya start
-  - type: Corrodible
-  # Mriya end
+  - type: Corrodible # Mriya. Додано компонент для плавлення.
   - type: InteractionOutline
 
 - type: entity
