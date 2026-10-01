@@ -18,6 +18,7 @@
     state: couch_mid
   - type: RMCMesonsNonviewable
   # Mriya start. Можливість будувати на ньому
+  #- type: BlockXenoConstruction
   - type: Tag
     tags:
     - AllowXenoConstruction
