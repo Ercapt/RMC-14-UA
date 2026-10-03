@@ -199,3 +199,23 @@
   id: DoorXenoResinQueen
   name: queen resin door
   description: A heavily reinforced resin door, built with the queen's enhanced abilities.
+
+# Mriya start. Маркер запланованої будівлі з черги планування королеви в кладці
+- type: entity
+  id: XenoConstructionQueuedMark
+  name: запланована конструкція
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    drawdepth: Effects
+    sprite: _Mriya/Structures/Xenos/mark_build.rsi
+    noRot: true
+    layers:
+    - state: icon
+      shader: unshaded
+  - type: Tag
+    tags:
+    - HideContextMenu
+# Mriya end
