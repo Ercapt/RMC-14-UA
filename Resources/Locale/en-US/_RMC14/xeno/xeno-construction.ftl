@@ -120,11 +120,3 @@ rmc-xeno-designer-greater-surge-cooldown = We need to wait before using Greater 
 rmc-xeno-designer-greater-surge-none = There's no design nodes nearby.
 rmc-xeno-designer-greater-surge-success = We convert {$count} design nodes into reflective resin walls.
 rmc-xeno-designer-infuse-node = You infuse the node with plasma.
-
-# Mriya start. Рядки попапів черги планування будівництва королеви в кладці
-rmc-xeno-construction-queued = Ми плануємо цю конструкцію ({$count} у черзі).
-rmc-xeno-construction-queue-next = Ми будуємо наступну заплановану структуру ({$remaining} залишилося у черзі).
-rmc-xeno-construction-queue-full = Ми не можемо планувати більше.
-rmc-xeno-construction-queue-failed = Заплановану структуру більше неможливо створити.
-rmc-xeno-construction-queue-cleared = Наші плани будівництва скасовано.
-# Mriya end

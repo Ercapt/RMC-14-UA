@@ -572,15 +572,14 @@ public sealed class SharedXenoConstructionSystem : EntitySystem
             args.Handled = true;
             return;
         }
-        // Mriya end
 
-        args.Handled = true; // Mriya 
-        StartSecreteDoAfter(xeno, args.Target, choice); // Mriya 
+        args.Handled = true;
+        StartSecreteDoAfter(xeno, args.Target, choice); 
     }
 
-    private bool StartSecreteDoAfter(Entity<XenoConstructionComponent> xeno, EntityCoordinates target, EntProtoId choice)     // Mriya. Винесений старт DoAfter секреції смоли щоб черга могла запускати наступну заплановану будівлю
-    {
-        var hasBoost = _queenBoostQuery.HasComp(xeno.Owner); // Mriya.
+    private bool StartSecreteDoAfter(Entity<XenoConstructionComponent> xeno, EntityCoordinates target, EntProtoId choice)
+        var hasBoost = _queenBoostQuery.HasComp(xeno.Owner); 
+    // Mriya end
         var animationChoice = hasBoost ? GetResinUpgradeTarget(choice) : choice;
         var effectId = XenoStructuresAnimation + animationChoice;
         var coordinates = GetNetCoordinates(target); // Mriya. Було args.Target
@@ -620,9 +619,7 @@ public sealed class SharedXenoConstructionSystem : EntitySystem
 
         return true;
     }
-    // Mriya end
 
-    // Mriya start. Перевірка чи вже йде будівництво щоб вирішити черга це чи одразу будувати
     private bool HasRunningSecreteDoAfter(EntityUid user)
     {
         if (!TryComp(user, out DoAfterComponent? doAfter))
@@ -639,9 +636,7 @@ public sealed class SharedXenoConstructionSystem : EntitySystem
 
         return false;
     }
-    // Mriya end
 
-    // Mriya start. Запуск наступної запланованої будівлі щойно попередня добудувалась
     private void TryStartNextQueued(Entity<XenoConstructionComponent> xeno)
     {
         if (!TryComp(xeno.Owner, out XenoConstructionQueueComponent? queue) ||
@@ -652,7 +647,6 @@ public sealed class SharedXenoConstructionSystem : EntitySystem
 
         if (!HasComp<XenoAttachedOvipositorComponent>(xeno.Owner))
         {
-            // Mriya. Вихід з кладки скасовує всю чергу
             DeleteAllQueueMarks(queue);
             if (_net.IsServer)
                 RemCompDeferred<XenoConstructionQueueComponent>(xeno.Owner);
@@ -701,7 +695,6 @@ public sealed class SharedXenoConstructionSystem : EntitySystem
 
             if (StartSecreteDoAfter(xeno, coords, next.StructureId))
             {
-                // Mriya. Маркер відпрацював, замість нього вже йде анімація будівництва
                 DeleteQueueMark(next.Marker);
                 _popup.PopupClient(
                     Loc.GetString("rmc-xeno-construction-queue-next", ("remaining", queue.Queue.Count)),
@@ -710,7 +703,6 @@ public sealed class SharedXenoConstructionSystem : EntitySystem
                 break;
             }
 
-            // Mriya. Не вдалось стартувати, повертаємо запис назад у чергу
             queue.Queue.Insert(0, next);
             Dirty(xeno.Owner, queue);
             break;
@@ -719,9 +711,7 @@ public sealed class SharedXenoConstructionSystem : EntitySystem
         if (queue.Queue.Count == 0 && _net.IsServer)
             RemCompDeferred<XenoConstructionQueueComponent>(xeno.Owner);
     }
-    // Mriya end
 
-    // Mriya start. Прибирання маркерів запланованих будівель щоб не лишались висіти на мапі
     private void DeleteQueueMark(NetEntity? marker)
     {
         if (!_net.IsServer || marker == null)
@@ -746,15 +736,12 @@ public sealed class SharedXenoConstructionSystem : EntitySystem
             DeleteQueueMark(entry.Marker);
         }
     }
-    // Mriya end
 
-    // Mriya start. Вихід з кладки та видалення сутності скасовують всю чергу планування
     private void OnQueueOvipositorChanged(Entity<XenoConstructionQueueComponent> ent, ref XenoOvipositorChangedEvent args)
     {
         if (args.Attached)
             return;
 
-        // Mriya. Вихід з кладки скасовує всі заплановані будівництва
         _popup.PopupClient(
             Loc.GetString("rmc-xeno-construction-queue-cleared"),
             ent.Owner,
@@ -790,8 +777,7 @@ public sealed class SharedXenoConstructionSystem : EntitySystem
 
         if (args.Handled || args.Cancelled)
         {
-            // Mriya. Додано запуск наступної запланованої будівлі
-            TryStartNextQueued(xeno);
+            TryStartNextQueued(xeno);     // Mriya. Додано запуск наступної запланованої будівлі
             return;
         }
 
@@ -800,8 +786,7 @@ public sealed class SharedXenoConstructionSystem : EntitySystem
             !xeno.Comp.CanBuild.Contains(args.StructureId) ||
             !CanSecreteOnTilePopup(xeno, args.StructureId, GetCoordinates(args.Coordinates), true, true))
         {
-            // Mriya. Додано запуск наступної запланованої будівлі
-            TryStartNextQueued(xeno);
+            TryStartNextQueued(xeno);    // Mriya. Додано запуск наступної запланованої будівлі
             return;
         }
 
@@ -825,8 +810,7 @@ public sealed class SharedXenoConstructionSystem : EntitySystem
 
             if (!hasBoost && !_xenoPlasma.TryRemovePlasmaPopup(xeno.Owner, cost))
             {
-                // Mriya. Додано запуск наступної запланованої будівлі
-                TryStartNextQueued(xeno);
+                TryStartNextQueued(xeno);         // Mriya. Додано запуск наступної запланованої будівлі
                 return;
             }
         }
@@ -940,8 +924,7 @@ public sealed class SharedXenoConstructionSystem : EntitySystem
         }
 
         _audio.PlayPredicted(xeno.Comp.BuildSound, coordinates, xeno);
-        // Mriya. Додано запуск наступної запланованої будівлі після добудови
-        TryStartNextQueued(xeno);
+        TryStartNextQueued(xeno);         // Mriya. Додано запуск наступної запланованої будівлі після добудови
     }
 
     private void OnXenoOrderConstructionAction(Entity<XenoConstructionComponent> xeno, ref XenoOrderConstructionActionEvent args)
