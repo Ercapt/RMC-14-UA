@@ -1,7 +1,5 @@
 # Ported from Colonial Marines Universe (https://github.com/AU-14/ColonialMarinesUniverse), licensed under AGPL-3.0.
-# Mriya. Заголовки українською. В оригіналі ">> COMMAND <<" та ">> OVERWATCH <<".
-# Mriya. Шрифти Default/DefaultBold. В оригіналі "Cozette" та "CozetteBold", яких нема в репозиторії.
-# Mriya. Відступ тексту від портрета. В оригіналі spriteSpacing 0.
+# Mriya. Шрифти Default/DefaultBold. В оригіналі "Cozette" та "CozetteBold", яких нема.
 - type: announcementPreset
   id: MarineCommand
   name: "Командування морпіхів"
@@ -67,6 +65,7 @@
       spriteBoxBorderColor: "#4a9eff"
       spriteBoxBorderThickness: 2
       spriteBoxPadding: 18
+      spriteBoxShader: RMCMarineAnnouncementGrid
       spriteGlow: true
       spriteGlowColor: "#4a9eff"
       spriteGlowIntensity: 0.6
