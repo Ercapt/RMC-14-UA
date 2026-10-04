@@ -578,6 +578,7 @@ public sealed class SharedXenoConstructionSystem : EntitySystem
     }
 
     private bool StartSecreteDoAfter(Entity<XenoConstructionComponent> xeno, EntityCoordinates target, EntProtoId choice)
+    {
         var hasBoost = _queenBoostQuery.HasComp(xeno.Owner); 
     // Mriya end
         var animationChoice = hasBoost ? GetResinUpgradeTarget(choice) : choice;
