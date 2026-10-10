@@ -1,11 +1,11 @@
-﻿using Content.Server._CMU14.Announce; // Mriya. Порт оголошень з CMU
-using Content.Server._RMC14.Rules.DistressSignal; // Mriya. Порт оголошень з CMU
+//using Content.Server._RMC14.Rules.DistressSignal;
+using Content.Server._CMU14.Announce; // Mriya. Порт оголошень з CMU
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Managers;
 using Content.Server.Radio.EntitySystems;
+//using Content.Shared._RMC14.ARES;
 using Content.Shared._RMC14.AlertLevel; // Mriya. Порт оголошень з CMU
 using Content.Shared._CMU14.Announce; // Mriya. Порт оголошень з CMU
-using Content.Shared._RMC14.ARES; // Mriya. Порт оголошень з CMU
 using Content.Shared._RMC14.ARES.Logs;
 using Content.Shared._RMC14.Dropship;
 using Content.Shared._RMC14.Intel;
