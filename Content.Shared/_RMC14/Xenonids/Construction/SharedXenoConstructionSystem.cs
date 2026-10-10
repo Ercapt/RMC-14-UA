@@ -550,7 +550,7 @@ public sealed class SharedXenoConstructionSystem : EntitySystem
             var queue = EnsureComp<XenoConstructionQueueComponent>(xeno.Owner);
             if (queue.Queue.Count >= queue.MaxQueued)
             {
-                _popup.PopupClient(Loc.GetString("rmc-xeno-construction-queue-full"), xeno.Owner, xeno.Owner);
+                _popup.PopupClient(Loc.GetString("mriya-xeno-construction-queue-full"), xeno.Owner, xeno.Owner);
                 return;
             }
 
@@ -566,7 +566,7 @@ public sealed class SharedXenoConstructionSystem : EntitySystem
             Dirty(xeno.Owner, queue);
 
             _popup.PopupClient(
-                Loc.GetString("rmc-xeno-construction-queued", ("count", queue.Queue.Count)),
+                Loc.GetString("mriya-xeno-construction-queued", ("count", queue.Queue.Count)),
                 args.Target,
                 xeno.Owner);
             args.Handled = true;
@@ -680,7 +680,7 @@ public sealed class SharedXenoConstructionSystem : EntitySystem
             {
                 DeleteQueueMark(next.Marker);
                 _popup.PopupClient(
-                    Loc.GetString("rmc-xeno-construction-queue-failed"),
+                    Loc.GetString("mriya-xeno-construction-queue-failed"),
                     coords,
                     xeno.Owner);
                 continue;
@@ -698,7 +698,7 @@ public sealed class SharedXenoConstructionSystem : EntitySystem
             {
                 DeleteQueueMark(next.Marker);
                 _popup.PopupClient(
-                    Loc.GetString("rmc-xeno-construction-queue-next", ("remaining", queue.Queue.Count)),
+                    Loc.GetString("mriya-xeno-construction-queue-next", ("remaining", queue.Queue.Count)),
                     coords,
                     xeno.Owner);
                 break;
@@ -744,7 +744,7 @@ public sealed class SharedXenoConstructionSystem : EntitySystem
             return;
 
         _popup.PopupClient(
-            Loc.GetString("rmc-xeno-construction-queue-cleared"),
+            Loc.GetString("mriya-xeno-construction-queue-cleared"),
             ent.Owner,
             ent.Owner);
         DeleteAllQueueMarks(ent.Comp);
