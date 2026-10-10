@@ -9,7 +9,7 @@
   - RMCXenoMobCollision
   id: CMXenoBoiler
   name: Бойлер
-  description: Величезна жовта чужопланетна істота, вкрита купою пульсуючих кислотних почок. Виглядає, ніби міномет.
+  description: Величезна жовта чужопланетна істота, вкрита купою пульсуючих кислотних бруньок. Виглядає, ніби міномет.
   components:
   - type: GuideHelp
     guides:
@@ -169,6 +169,7 @@
 - type: entity
   parent: CMXenoBoiler
   id: RMCXenoBoiler
+  description: Величезна жовта чужопланетна істота, вкрита купою пульсуючих кислотних бруньок. Виглядає, ніби міномет. # Mriya
   components:
   - type: Xeno
     actionIds:
@@ -195,6 +196,7 @@
 - type: entity
   parent: CMXenoBoiler
   id: RMCXenoBoilerSapper
+  description: Величезна жовта чужопланетна істота, вкрита купою пульсуючих кислотних бруньок. Виглядає, ніби якась дуже підступна зброя. # Mriya
   suffix: Sapper
   components:
   - type: Sprite

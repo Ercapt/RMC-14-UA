@@ -44,7 +44,7 @@
     thresholds:
       - trigger:
           !type:DamageTrigger
-          damage: 30 # Mriya. В оригіналі 110. Зменшення необхідної шкоди
+          damage: 110
         behaviors:
           - !type:DoActsBehavior
             acts: ["Destruction"]
@@ -159,7 +159,7 @@
             acts: ["Destruction"]
       - trigger:
           !type:DamageTrigger
-          damage: 20 # Mriya. В оригіналі 30. Зменшення необхідної шкоди
+          damage: 20 # Mriya. В оригіналі 30
         behaviors:
           - !type:ChangeConstructionNodeBehavior
             node: platformBroken
@@ -197,7 +197,7 @@
     thresholds:
       - trigger:
           !type:DamageTrigger
-          damage: 30 # Mriya. В оригіналі 135. Зменшення необхідної шкоди
+          damage: 135
         behaviors:
           - !type:DoActsBehavior
             acts: ["Destruction"]

@@ -545,8 +545,8 @@
 - type: entity
   parent: ColMarTechBaseAnchorable
   id: CMVendorBlood
-  name: Дозатор Кров Авант
-  description: Диспенсер крові від Авант Біомедікал – це найсучасніший диспенсер для крові! Придбайте свій сьогодні! Виготовлено Авант Біомедікал.
+  name: Дозатор Крові Авант Біомедікал
+  description: Диспенсер крові від Авант Біомедікал – це найсучасніший диспенсер для крові! Придбайте свій сьогодні (вам він точно потрібен)! Виготовлено Авант Біомедікал.
   components:
   - type: Sprite
     sprite: _RMC14/Structures/Machines/VendingMachines/blood.rsi
@@ -571,7 +571,7 @@
     canManualRestock: true
     hackable: true
     sections:
-    - name: "Пакет з кров'ю"
+    - name: "Пакети із кров'ю"
       entries:
       - id: CMBloodPackFull
         amount: 30 # 6 blood types, 5 each
@@ -579,4 +579,4 @@
       entries:
       - id: CMBloodPack
         amount: 5
-        name: empty blood pack
+        name: "пакет для крові (Порожній)"

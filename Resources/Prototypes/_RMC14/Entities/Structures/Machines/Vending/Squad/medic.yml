@@ -39,7 +39,7 @@
     #    CMMedicalSplints: 1P
 #        recommended: true
       - id: CMBloodPackFull # TODO RMC14 O-
-        name: пакет з кров'ю (О-)
+        name: пакет із кров'ю (О-)
         points: 4
     - name: Аптечки Першої Допомоги
       entries:
