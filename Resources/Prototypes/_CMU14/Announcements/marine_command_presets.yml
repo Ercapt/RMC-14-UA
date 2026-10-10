@@ -65,7 +65,7 @@
       spriteBoxBorderColor: "#4a9eff"
       spriteBoxBorderThickness: 2
       spriteBoxPadding: 18
-      spriteBoxShader: RMCMarineAnnouncementGrid
+      spriteBoxShader: CMUMarineAnnouncementGrid
       spriteGlow: true
       spriteGlowColor: "#4a9eff"
       spriteGlowIntensity: 0.6
@@ -221,7 +221,7 @@
       spriteBoxBorderColor: "#4a9eff"
       spriteBoxBorderThickness: 2
       spriteBoxPadding: 18
-      spriteBoxShader: RMCMarineAnnouncementGrid
+      spriteBoxShader: CMUMarineAnnouncementGrid
       spriteGlow: false
       spriteGlowColor: "#4a9eff"
       spriteGlowIntensity: 0.6

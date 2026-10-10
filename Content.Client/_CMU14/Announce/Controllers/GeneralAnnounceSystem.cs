@@ -1,6 +1,6 @@
 // Ported from Colonial Marines Universe (https://github.com/AU-14/ColonialMarinesUniverse), licensed under AGPL-3.0.
 using Content.Shared._CMU14.Announce;
-using Content.Shared._RMC14.CCVar;
+using Content.Shared._CMU14.CCVar;
 using Robust.Client.GameStates;
 using Robust.Client.UserInterface;
 using Robust.Shared.Configuration;
@@ -24,8 +24,8 @@ public sealed partial class GeneralAnnounceSystem : EntitySystem
     {
         base.Initialize();
 
-        _cfg.OnValueChanged(RMCCVars.RMCAnnouncementStyle, OnPreferenceChanged, true);
-        _cfg.OnValueChanged(RMCCVars.RMCAnnouncementStyleOverrides, OnOverridesChanged, true);
+        _cfg.OnValueChanged(CMUCVars.CMUAnnouncementStyle, OnPreferenceChanged, true);
+        _cfg.OnValueChanged(CMUCVars.CMUAnnouncementStyleOverrides, OnOverridesChanged, true);
         _gameStates.GameStateApplied += OnGameStateApplied;
         SubscribeNetworkEvent<AnnouncementNetMessage>(OnAnnouncementMessage);
     }
