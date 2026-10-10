@@ -3,6 +3,7 @@
   parent: RMCBookcase
   id: MRBookcasePhilology
   name: книжкова шафа з мовними посібниками
+  suffix: Мрія
   components:
   - type: Storage
     whitelist:
@@ -15,5 +16,6 @@
       - id: CMPamphletLanguageGerman
       - id: CMPamphletLanguageSpanish
       - id: CMPamphletLanguageFrench
+      - id: CMPamphletLanguageScandinavian
       - id: CMPamphletLanguageSign
       - id: MRPamphletLanguageEnglish

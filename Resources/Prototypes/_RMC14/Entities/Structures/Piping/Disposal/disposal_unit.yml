@@ -1,9 +1,15 @@
 - type: entity
   id: CMDisposalUnit
   parent: DisposalUnitBase
-  name: disposal unit
-  description: A pneumatic waste disposal unit.
+  name: смітник
+  description: Пневматичний пристрій для збирання відходів.
   components:
+  # Mriya start. Можливість будувати на ньому
+  - type: Tag
+    tags:
+    - Structure
+    - AllowXenoConstruction
+  # Mriya end
   - type: VehicleSmashable
   - type: Sprite
     sprite: _RMC14/Structures/Piping/disposal.rsi

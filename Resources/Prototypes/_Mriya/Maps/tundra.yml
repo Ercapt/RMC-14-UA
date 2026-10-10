@@ -1,0 +1,42 @@
+- type: gameMap
+  id: MRTundraPVE
+  mapName: Наполеон
+  mapPath: /Maps/_Mriya/tundra.yml
+  minPlayers: 0
+  maxRandomOffset: 0
+  randomRotation: false
+  stations:
+    UNSTundra:
+      stationProto: StandardUNMCWarship
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'ДКП-Тундра "Наполеон"'
+        - type: StationJobs
+          availableJobs:
+            # Командування
+            CMPVEPlatoonCommander: [1, 1]
+
+            # Інші
+            RMCJobSynthetic: [1, 1]
+
+            # Морпіхи
+            CMPVESectionSergeant: [1, 1]
+            CMPVESquadLeader: [2, 2]
+            CMPVESmartGunOperator: [2, 2]
+            CMPVEHospitalCorpsman: [2, 2]
+            CMPVERifleman: [16, 16]
+
+
+- type: gameMap
+  id: MRTundraNOJOBS
+  mapName: Наполеон
+  mapPath: /Maps/_Mriya/tundra.yml
+  minPlayers: 0
+  maxRandomOffset: 0
+  randomRotation: false
+  stations:
+    UNSTundra:
+      stationProto: StandardUNMCWarship
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'ДКП-Тундра "Наполеон"'

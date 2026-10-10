@@ -8,3 +8,7 @@
 # Для шерпи
 - type: Tag
   id: MRFlareBox
+
+# Білий список будівництва ксено
+- type: Tag
+  id: AllowXenoConstruction

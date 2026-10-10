@@ -5,6 +5,12 @@
   description: A large cabinet with drawers.
   suffix: Empty
   components:
+  # Mriya start. Можливість будувати на ньому
+  - type: Tag
+    tags:
+    - Structure
+    - AllowXenoConstruction
+  # Mriya end
   - type: Storage
     grid:
     - 0,0,9,3
@@ -147,6 +153,8 @@
   components:
   - type: Sprite
     state: sidecabinet
+    noRot: false
+  - type: Transform
     noRot: false
   - type: Fixtures
     fixtures:
