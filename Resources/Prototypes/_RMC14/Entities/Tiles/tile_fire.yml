@@ -51,6 +51,17 @@
     id: RMCTileFire
     extinguishInstantly: true
     duration: 20
+    # Mriya start. Оновлення вогню.
+    canSpread: true
+    baseSpreadChance: 0.35
+    spreadFalloffPerTile: 0.05
+    minSpreadChance: 0.02
+    distancePenaltyPerTile: 0.2
+    maxSpreadDistance: 5
+    spreadCheckInterval: 1.5
+    maxSpreadsPerCheck: 2
+    emptyTileFactor: 0.6
+    # Mriya end
   - type: Appearance
   - type: GenericVisualizer
     visuals:
@@ -124,6 +135,17 @@
     duration: 40
     extinguishInstantly: false
     patExtinguishMultiplier: 2
+    # Mriya start. Оновлення вогню.
+    canSpread: true
+    baseSpreadChance: 0.8
+    spreadFalloffPerTile: 0
+    minSpreadChance: 0
+    distancePenaltyPerTile: 0
+    maxSpreadDistance: 1
+    spreadCheckInterval: 1.5
+    maxSpreadsPerCheck: 2
+    emptyTileFactor: 1.0
+    # Mriya end
   - type: GenericVisualizer
     visuals:
       enum.TileFireLayers.Base:
