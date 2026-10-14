@@ -50,6 +50,14 @@
       entries:
       - id: RMCPlayingCardDeck
         amount: 10
+    # Mriya start
+    - name: Настільні ігри
+      entries:
+      - id: ChessBoard
+        amount: 3
+      - id: CheckerBoard
+        amount: 3
+    # Mriya end
     - name: Журнали
       entries:
       # Mriya start. Журнали "Хто я? Де я?"
