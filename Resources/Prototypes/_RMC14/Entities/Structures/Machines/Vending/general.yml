@@ -57,6 +57,16 @@
         amount: 3
       - id: CheckerBoard
         amount: 3
+      - id: ParchisBoard
+        amount: 2
+      - id: BackgammonBoard
+        amount: 3
+      - id: ShipBattlemap
+        amount: 2
+      - id: DiceBag
+        amount: 1
+      - id: d6Dice
+        amount: 1
     # Mriya end
     - name: Журнали
       entries:
