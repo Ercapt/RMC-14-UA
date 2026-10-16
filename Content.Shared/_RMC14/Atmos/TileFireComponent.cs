@@ -63,7 +63,10 @@ public sealed partial class TileFireComponent : Component
 
     [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), AutoNetworkedField, AutoPausedField]
     public TimeSpan NextSpreadCheck;
-    //Mriya end
+
+    [DataField, AutoNetworkedField]
+    public float CookOffMultiplier = 1f;
+    // Mriya end.
 }
 
 [Serializable, NetSerializable]

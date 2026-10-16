@@ -93,33 +93,42 @@ public sealed class CookOffSystem : EntitySystem
                 continue;
             }
 
-            if (ShouldStartCooking(uid))
-                StartCooking(ent, now, false);
+            if (ShouldStartCooking(uid, out var multiplier))
+                StartCooking(ent, now, false, multiplier);
         }
 
         _due.Clear();
     }
 
-    private bool ShouldStartCooking(EntityUid uid)
+    private bool ShouldStartCooking(EntityUid uid, out float multiplier)
     {
+        multiplier = 1f;
+
         if (TryComp<FlammableComponent>(uid, out var flammable) && flammable.OnFire)
             return true;
 
         var coords = _transform.GetMoverCoordinates(uid);
         var anchored = _rmcMap.GetAnchoredEntitiesEnumerator(coords);
+        var foundFire = false;
         while (anchored.MoveNext(out var ent))
         {
             if (ent == uid)
                 continue;
 
-            if (HasComp<TileFireComponent>(ent))
-                return true;
+            if (!TryComp<TileFireComponent>(ent, out var fire))
+                continue;
+
+            foundFire = true;
+            multiplier = Math.Min(multiplier, fire.CookOffMultiplier);
         }
 
-        return false;
+        if (multiplier <= 0f)
+            multiplier = 1f;
+
+        return foundFire;
     }
 
-    private void StartCooking(Entity<CookOffComponent> ent, TimeSpan now, bool fromExplosion)
+    private void StartCooking(Entity<CookOffComponent> ent, TimeSpan now, bool fromExplosion, float fireMultiplier = 1f)
     {
         var (uid, cook) = (ent.Owner, ent.Comp);
         if (cook.Cooking || cook.Exploded)
@@ -128,6 +137,15 @@ public sealed class CookOffSystem : EntitySystem
         var delay = fromExplosion
             ? Math.Min(1.5f, cook.MinCookTime)
             : _random.NextFloat(cook.MinCookTime, Math.Max(cook.MinCookTime, cook.MaxCookTime));
+
+        if (!fromExplosion)
+        {
+            if (fireMultiplier <= 0f)
+                fireMultiplier = 1f;
+
+            delay *= fireMultiplier;
+            delay = Math.Max(0.5f, delay);
+        }
 
         cook.Cooking = true;
         cook.CookUntil = now + TimeSpan.FromSeconds(delay);
