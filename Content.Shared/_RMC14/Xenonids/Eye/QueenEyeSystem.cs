@@ -116,7 +116,10 @@ public sealed class QueenEyeSystem : EntitySystem
         _eye.SetDrawFov(ent, false);
         _mover.SetRelay(ent, ent.Comp.Eye.Value);
 
-        // Mriya start. Оновити стелю на позиції ока при вході в око
+        // Mriya start. Оновити стелю на позиції ока при вході в око.
+        if (_net.IsClient)
+            return;
+
         if (TryComp(ent.Owner, out AreaInfoComponent? areaInfo))
             _areaInfo.RefreshAreaInfo((ent.Owner, areaInfo), false);
         // Mriya end
@@ -267,6 +270,10 @@ public sealed class QueenEyeSystem : EntitySystem
     private void RefreshQueenAreaInfo(Entity<QueenEyeComponent> ent)
     {
         if (_timing.ApplyingState)
+            return;
+
+        // Сповіщає про зміну зони через оновлення alert.
+        if (_net.IsClient)
             return;
 
         if (ent.Comp.Queen is not { } queen ||

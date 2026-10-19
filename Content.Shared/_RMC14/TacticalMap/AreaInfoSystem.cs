@@ -84,7 +84,10 @@ public sealed class AreaInfoSystem : EntitySystem
         if (_timing.ApplyingState)
             return;
 
-        // TODO RMC14 make this client only?
+        // Клієнт не перевіряє зону самостійно — сервер сповіщає про зміну зони через оновлення alert.
+        if (_net.IsClient)
+            return;
+
         // update the alert when they move to a new area
         RefreshAreaInfo(ent, true); // Mriya. Була перевірка if (GetAreaInfo(ent, true) is not { areaName: var areaName, ceilingLevel: var ceilingLevel, restrictions: var restrictions })
     }
