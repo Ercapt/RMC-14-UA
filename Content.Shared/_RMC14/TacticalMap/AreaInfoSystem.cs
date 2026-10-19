@@ -84,15 +84,13 @@ public sealed class AreaInfoSystem : EntitySystem
         if (_timing.ApplyingState)
             return;
 
-        // Клієнт не перевіряє зону самостійно — сервер сповіщає про зміну зони через оновлення alert.
+        // Mriya start
         if (_net.IsClient)
             return;
 
-        // update the alert when they move to a new area
-        RefreshAreaInfo(ent, true); // Mriya. Була перевірка if (GetAreaInfo(ent, true) is not { areaName: var areaName, ceilingLevel: var ceilingLevel, restrictions: var restrictions })
+        RefreshAreaInfo(ent, true);
     }
 
-    // Mriya start. Публічний рефреш для виклику з QueenEyeSystem
     public void RefreshAreaInfo(Entity<AreaInfoComponent> ent, bool checkMove)
     {
         if (GetAreaInfo(ent, checkMove) is not { areaName: var areaName, ceilingLevel: var ceilingLevel, restrictions: var restrictions })     

@@ -262,17 +262,15 @@ public sealed class QueenEyeSystem : EntitySystem
                 _isRevertingMove = false;
             }
         }
-
-        RefreshQueenAreaInfo(ent); // Mriya. Оновити стелю по оку
+    // Mriya start. Оновлення стелі королеви по позиції ока при його русі
+        RefreshQueenAreaInfo(ent); 
     }
 
-    // Mriya start. Оновлення стелі королеви по позиції ока при його русі
     private void RefreshQueenAreaInfo(Entity<QueenEyeComponent> ent)
     {
         if (_timing.ApplyingState)
             return;
 
-        // Сповіщає про зміну зони через оновлення alert.
         if (_net.IsClient)
             return;
 
