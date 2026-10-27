@@ -63,7 +63,6 @@
   description: Кейс із пістолетом-кулеметом М63 та трьома магазинами.
   components:
   - type: Storage
-    maxItemSize: Ginormous
     grid:
     - 0,0,10,1
   - type: StorageFill
@@ -79,7 +78,6 @@
   description: Кейс із бойовою гвинтівкою М4СПГ та чотирма магазинами.
   components:
   - type: Storage
-    maxItemSize: Ginormous
     grid:
     - 0,0,10,1
   - type: StorageFill
