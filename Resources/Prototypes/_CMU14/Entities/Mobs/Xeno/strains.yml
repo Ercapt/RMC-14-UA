@@ -1,0 +1,225 @@
+# Ported from Colonial Marines Universe (https://github.com/AU-14/ColonialMarinesUniverse), licensed under AGPL-3.0.
+# Xeno strains: Heatshield (Defender), Venator (Spitter), Bulwark (Warrior),
+# Sentinel-Manticore (Sentinel) and Parasite Runner.
+
+- type: entity
+  parent: CMXenoDefender
+  id: CMXenoDefenderHeatshield
+  suffix: Heatshield
+  components:
+  - type: Sprite
+    sprite: _CMU14/Mobs/Xenonids/Defender/heatshield_defender.rsi
+  - type: Xeno
+    actionIds:
+    - ActionXenoRest
+    - ActionXenoRegurgitate
+    - ActionXenoWatch
+    - ActionXenoTailSlam
+    - ActionXenoToggleCrest
+    - ActionXenoVomitBile
+    - ActionXenoSelfImmolate
+    - ActionXenoThermoregulation
+    - ActionXenoDevolve
+  - type: XenoStrain
+    name: rmc-xeno-heatshield-name
+    description: rmc-xeno-heatshield-description
+    popup: rmc-xeno-heatshield-popup
+  - type: XenoHeatshield
+  - type: CMArmor
+    xenoArmor: 25
+    explosionArmor: 50
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 1.75
+    baseSprintSpeed: 3.1
+  - type: XenoHidden
+  - type: RMCActionOrder
+    id: CMXenoDefenderHeatshield
+  - type: RemoveComponents
+    components:
+    - type: XenoEvolution
+
+- type: entity
+  parent: CMXenoSpitter
+  id: CMXenoSpitterVenator
+  suffix: Venator
+  components:
+  - type: Sprite
+    sprite: _CMU14/Mobs/Xenonids/Spitter/venator_spitter.rsi
+  - type: Xeno
+    actionIds:
+    - ActionXenoRest
+    - ActionXenoRegurgitate
+    - ActionXenoWatch
+    - ActionXenoTailStab
+    - ActionXenoVenatorCorrosiveSpit
+    - ActionXenoVenatorAcidBlob
+    - ActionXenoVenatorEnzymaticBreath
+    - ActionXenoStoreAcid
+    - ActionXenoDevolve
+  - type: XenoStrain
+    name: rmc-xeno-venator-name
+    description: rmc-xeno-venator-description
+    popup: rmc-xeno-venator-popup
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      400: Critical
+      500: Dead
+  - type: XenoPlasma
+    plasma: 600
+    maxPlasma: 600
+    plasmaRegenOnWeeds: 4.5
+  - type: CMArmor
+    xenoArmor: 25
+    explosionArmor: 20
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 7.5
+        Slash: 7.5
+        Piercing: 7.5
+  - type: XenoTailStab
+    inject: {}
+    tailDamage:
+      types:
+        Blunt: 12
+        Slash: 12
+        Piercing: 12
+  - type: RMCXenoDamageVisuals
+    prefix: venator
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 1.8
+    baseSprintSpeed: 3.2
+  - type: Evasion
+    evasion: 0
+  - type: XenoVenator
+  - type: XenoHidden
+  - type: RMCActionOrder
+    id: CMXenoSpitterVenator
+  - type: RemoveComponents
+    components:
+    - type: XenoEvolution
+
+- type: entity
+  parent: CMXenoWarrior
+  id: CMXenoWarriorBulwark
+  suffix: Bulwark
+  components:
+  - type: Sprite
+    sprite: _CMU14/Mobs/Xenonids/Warrior/bulwark_warrior.rsi
+    layers:
+    - map: [ "enum.XenoVisualLayers.Base" ]
+      state: alive
+    - map: [ "enum.RMCDamageVisualLayers.Base" ]
+      visible: false
+    - map: [ "enum.XenoInhandVisualLayers.Left" ]
+      visible: false
+    - map: [ "enum.XenoInhandVisualLayers.Right" ]
+      visible: false
+    - map: [ "enum.XenoBulwarkVisualLayers.Shield" ]
+      state: shield
+      visible: false
+  - type: Xeno
+    actionIds:
+    - ActionXenoRest
+    - ActionXenoRegurgitate
+    - ActionXenoWatch
+    - ActionXenoTailStab
+    - ActionXenoEncasedPlates
+    - ActionXenoPlateBash
+    - ActionXenoBulwarkTailSwing
+    - ActionXenoReflectiveShield
+    - ActionXenoDevolve
+  - type: XenoStrain
+    name: rmc-xeno-bulwark-name
+    description: rmc-xeno-bulwark-description
+    popup: rmc-xeno-bulwark-popup
+  - type: XenoBulwark
+  - type: Tackle
+    min: 4
+    max: 5
+  - type: XenoHidden
+  - type: RMCActionOrder
+    id: CMXenoWarriorBulwark
+  - type: RemoveComponents
+    components:
+    - type: XenoEvolution
+
+- type: entity
+  parent: CMXenoSentinel
+  id: RMCXenoSentinelToxic
+  suffix: Manticore
+  components:
+  - type: Sprite
+    sprite: _CMU14/Mobs/Xenonids/Sentinel/toxic_sentinel.rsi
+  - type: Xeno
+    actionIds:
+    - ActionXenoRest
+    - ActionXenoRegurgitate
+    - ActionXenoWatch
+    - ActionXenoAcidWeak
+    - ActionXenoToxicSpit
+    - ActionXenoToxicSlash
+    - ActionXenoDrainSting
+    - ActionXenoDevolve
+  - type: XenoPlasma
+    plasma: 600
+    maxPlasma: 600
+    plasmaRegenOnWeeds: 3
+  - type: CMArmor
+    xenoArmor: 10
+    explosionArmor: 10
+  - type: XenoAcid
+  - type: XenoToxicSpit
+  - type: XenoToxicSlash
+  - type: XenoDrainSting
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 8.33
+        Slash: 8.33
+        Piercing: 8.34
+  - type: XenoStrain
+    name: rmc-xeno-toxic-name
+    description: rmc-xeno-toxic-description
+    popup: rmc-xeno-toxic-popup
+  - type: XenoHidden
+  - type: RMCActionOrder
+    id: RMCXenoSentinelToxic
+  - type: RemoveComponents
+    components:
+    - type: XenoEvolution
+
+- type: entity
+  parent: CMXenoParasiteBase
+  id: CMUXenoParasiteRunner
+  name: Паразит
+  suffix: Runner
+  components:
+  - type: Sprite
+    sprite: _CMU14/Mobs/Xenonids/Parasite/parasite_runner.rsi
+  - type: Xeno
+    muteOnSpawn: false
+  - type: XenoLeap
+    delay: 0
+  - type: XenoStrain
+    name: cmu-xeno-parasite-runner-name
+    description: cmu-xeno-parasite-runner-description
+    popup: cmu-xeno-parasite-runner-popup
+  - type: RMCActionOrder
+    id: CMUXenoParasiteRunner
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 5.55
+    baseSprintSpeed: 10
+  - type: FixedIdentity
+    name: cmu-job-name-xeno-parasite-runner
+    whitelist:
+      components:
+      - Xeno
+  - type: RemoveComponents
+    components:
+    - type: DamageOffWeeds
+    - type: XenoRankNames
+    - type: IntrinsicRadioReceiver
+    - type: IntrinsicRadioTransmitter
+    - type: ActiveRadio
