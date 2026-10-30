@@ -158,7 +158,7 @@
     # Mriya start. Еволюція у Могильницю, касту третього рівня зі СМУ.
     max: 500
     evolvesTo:
-    - CMXenoReaper
+    - CMUXenoReaper
     # Mriya end
     strains:
     - RMCXenoCarrierEggsac

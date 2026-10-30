@@ -62,7 +62,7 @@
     - CMXenoPraetorian
     # Mriya start. Страйн СМУ: Ловчиця.
     strains:
-    - CMXenoSpitterVenator
+    - CMUXenoSpitterVenator
     # Mriya end
   - type: XenoSpit
   - type: XenoChargeSpit

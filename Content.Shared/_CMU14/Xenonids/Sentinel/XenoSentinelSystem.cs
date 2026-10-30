@@ -132,7 +132,7 @@ public sealed partial class XenoSentinelSystem : EntitySystem
         if (TryAddIntoxicated(shooter, args.Target, spit.Comp.Stacks))
         {
             _audio.PlayPvs(spit.Comp.HitSound, args.Target);
-            _popup.PopupEntity(Loc.GetString("rmc-xeno-sentinel-toxic-spit-hit"), args.Target, shooter);
+            _popup.PopupEntity(Loc.GetString("cmu-xeno-sentinel-toxic-spit-hit"), args.Target, shooter);
         }
     }
 
@@ -153,7 +153,7 @@ public sealed partial class XenoSentinelSystem : EntitySystem
         ApplyToxicSlashSpeed(xeno, xeno.Comp.SpeedModifier, xeno.Comp.ActiveDuration);
 
         _audio.PlayPredicted(xeno.Comp.ActivateSound, xeno, xeno);
-        _popup.PopupEntity(Loc.GetString("rmc-xeno-sentinel-toxic-slash-start"), xeno, xeno);
+        _popup.PopupEntity(Loc.GetString("cmu-xeno-sentinel-toxic-slash-start"), xeno, xeno);
         foreach (var action in _rmcActions.GetActionsWithEvent<XenoToxicSlashActionEvent>(xeno))
         {
             _actions.SetToggled(action.AsNullable(), true);
@@ -226,7 +226,7 @@ public sealed partial class XenoSentinelSystem : EntitySystem
             !TryComp(args.Target, out XenoIntoxicatedComponent? intoxicated) ||
             intoxicated.Stacks <= 0)
         {
-            _popup.PopupEntity(Loc.GetString("rmc-xeno-sentinel-drain-sting-not-intoxicated"), xeno, xeno, PopupType.SmallCaution);
+            _popup.PopupEntity(Loc.GetString("cmu-xeno-sentinel-drain-sting-not-intoxicated"), xeno, xeno, PopupType.SmallCaution);
             return;
         }
 
@@ -266,7 +266,7 @@ public sealed partial class XenoSentinelSystem : EntitySystem
         if (intoxicated.Stacks <= 0)
             RemCompDeferred<XenoIntoxicatedComponent>(args.Target);
 
-        _popup.PopupEntity(Loc.GetString("rmc-xeno-sentinel-drain-sting-drain"), args.Target, xeno);
+        _popup.PopupEntity(Loc.GetString("cmu-xeno-sentinel-drain-sting-drain"), args.Target, xeno);
 
         if (stacks >= xeno.Comp.SurgeThreshold)
         {
@@ -351,12 +351,12 @@ public sealed partial class XenoSentinelSystem : EntitySystem
 
         if (intoxicated.Stacks <= 0)
         {
-            _popup.PopupEntity(Loc.GetString("rmc-xeno-sentinel-intoxicated-resist-finish"), ent, ent);
+            _popup.PopupEntity(Loc.GetString("cmu-xeno-sentinel-intoxicated-resist-finish"), ent, ent);
             RemCompDeferred<XenoIntoxicatedComponent>(ent);
             return;
         }
 
-        _popup.PopupEntity(Loc.GetString("rmc-xeno-sentinel-intoxicated-resist-reduce"), ent, ent, PopupType.SmallCaution);
+        _popup.PopupEntity(Loc.GetString("cmu-xeno-sentinel-intoxicated-resist-reduce"), ent, ent, PopupType.SmallCaution);
     }
 
     private bool TryStartIntoxicatedResist(EntityUid uid, XenoIntoxicatedComponent intoxicated)
@@ -466,7 +466,7 @@ public sealed partial class XenoSentinelSystem : EntitySystem
         UpdateIntoxicatedMovement(target, intoxicated);
         var filter = Filter.Pvs(target, entityManager: EntityManager);
         _colorFlash.RaiseEffect(Color.FromHex("#7DCC00"), new List<EntityUid> { target }, filter);
-        _popup.PopupEntity(Loc.GetString("rmc-xeno-sentinel-intoxicated-gained"), target, target, PopupType.SmallCaution);
+        _popup.PopupEntity(Loc.GetString("cmu-xeno-sentinel-intoxicated-gained"), target, target, PopupType.SmallCaution);
         return true;
     }
 
@@ -493,7 +493,7 @@ public sealed partial class XenoSentinelSystem : EntitySystem
         surge.ExpiresAt = _timing.CurTime + duration;
         Dirty(uid, surge);
         _armor.UpdateArmorValue((uid, null));
-        _popup.PopupEntity(Loc.GetString("rmc-xeno-sentinel-drain-surge"), uid, uid);
+        _popup.PopupEntity(Loc.GetString("cmu-xeno-sentinel-drain-surge"), uid, uid);
     }
 
     private void ApplyToxicSlashSpeed(EntityUid uid, float speedModifier, TimeSpan duration)
@@ -560,7 +560,7 @@ public sealed partial class XenoSentinelSystem : EntitySystem
                 continue;
 
             RemCompDeferred<XenoActiveToxicSlashComponent>(uid);
-            _popup.PopupEntity(Loc.GetString("rmc-xeno-sentinel-toxic-slash-expire"), uid, uid, PopupType.SmallCaution);
+            _popup.PopupEntity(Loc.GetString("cmu-xeno-sentinel-toxic-slash-expire"), uid, uid, PopupType.SmallCaution);
         }
 
         var intoxicatedQuery = EntityQueryEnumerator<XenoIntoxicatedComponent>();

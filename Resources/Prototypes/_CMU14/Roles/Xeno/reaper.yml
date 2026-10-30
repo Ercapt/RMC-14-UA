@@ -1,9 +1,9 @@
 - type: job
   parent: CMJobXenoBase
-  id: CMXenoReaper
+  id: CMUXenoReaper
   name: cm-job-name-xeno-reaper
-  playTimeTracker: CMJobXenoReaper
+  playTimeTracker: CMUJobXenoReaper
 
 - type: playTimeTracker
-  id: CMJobXenoReaper
+  id: CMUJobXenoReaper
   isXeno: true

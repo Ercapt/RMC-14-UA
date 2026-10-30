@@ -63,7 +63,7 @@
     - CMXenoPraetorian
     # Mriya start. Страйн СМУ: Бастіон.
     strains:
-    - CMXenoWarriorBulwark
+    - CMUXenoWarriorBulwark
     # Mriya end
   - type: CMArmor
     xenoArmor: 20

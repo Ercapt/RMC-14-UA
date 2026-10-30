@@ -136,7 +136,7 @@
   - type: XenoEvolution
     strains:
     - CMXenoDefenderSteelcrest
-    - CMXenoDefenderHeatshield # Mriya. Страйн СМУ: Теплощит.
+    - CMUXenoDefenderHeatshield # Mriya. Страйн СМУ: Теплощит.
   - type: RMCActionOrder
     id: CMXenoDefender
 

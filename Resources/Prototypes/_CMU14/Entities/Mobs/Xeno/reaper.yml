@@ -1,11 +1,11 @@
 # Ported from Colonial Marines Universe (https://github.com/AU-14/ColonialMarinesUniverse), licensed under AGPL-3.0.
-# У СМУ це мутація, я думаю що краще у окемий Т3, бо це потенційно досить сильний сапорт
-
+# Mriya. У СМУ це мутація, я думаю, що краще у окремий Т3, бо це потенційно досить сильний сапорт
 - type: entity
   parent: RMCXenoCarrierBase
-  id: CMXenoReaper
+  id: CMUXenoReaper
   name: Могильниця
   description: Високий ксеноморф, що збирає плоть мертвих інкубаторів і використовує її для оживлення сестер та захисту вулика.
+  suffix: CMU
   components:
   - type: Sprite
     sprite: _CMU14/Mobs/Xenonids/Reaper/reaper.rsi
@@ -15,7 +15,7 @@
       650: Critical
       750: Dead
   - type: Xeno
-    role: CMXenoReaper
+    role: CMUXenoReaper
     actionIds:
     - ActionXenoRest
     - ActionXenoRegurgitate
@@ -34,9 +34,9 @@
     - ActionXenoRapture
     - ActionXenoReaperRedGas
     - ActionXenoDevolve
-    tier: 3 # Повноцінна каста третього рівня.
+    tier: 3 # Mriya. Повноцінна каста третього рівня.
     hudOffset: -0.1,0.1
-    unlockAt: 1200
+    unlockAt: 1200 # Mriya. 20 хвилин
   - type: XenoHeavy
   - type: XenoDevolve
     devolvesTo:
@@ -93,6 +93,6 @@
   - type: RMCSurgeryXenoHeart
     item: RMCOrganXenoHeartT3
   - type: FixedIdentity
-    name: cm-job-name-xeno-reaper
+    name: cmu-job-name-xeno-reaper
   - type: RMCActionOrder
-    id: CMXenoReaper
+    id: CMUXenoReaper

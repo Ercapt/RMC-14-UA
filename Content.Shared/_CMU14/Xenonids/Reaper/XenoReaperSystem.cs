@@ -311,7 +311,7 @@ public sealed partial class XenoReaperSystem : EntitySystem
             visualState: xeno.Comp.CarrionMantleShieldVisualState);
         _movementSpeed.RefreshMovementSpeedModifiers(args.Target);
         _armor.UpdateArmorValue((args.Target, null));
-        _popup.PopupEntity(Loc.GetString("cm-xeno-reaper-carrion-mantle"), args.Target, xeno);
+        _popup.PopupEntity(Loc.GetString("cmu-xeno-reaper-carrion-mantle"), args.Target, xeno);
     }
 
     private void OnCarrionMantleGetArmor(Entity<XenoCarrionMantleComponent> ent, ref CMGetArmorEvent args)
@@ -398,7 +398,7 @@ public sealed partial class XenoReaperSystem : EntitySystem
             !_unrevivable.IsUnrevivable(target))
         {
             if (popup)
-                _popup.PopupEntity(Loc.GetString("cm-xeno-reaper-harvest-permadead-marine"), xeno, xeno);
+                _popup.PopupEntity(Loc.GetString("cmu-xeno-reaper-harvest-permadead-marine"), xeno, xeno);
 
             return false;
         }
@@ -406,7 +406,7 @@ public sealed partial class XenoReaperSystem : EntitySystem
         if (HasComp<XenoFleshHarvestedComponent>(target))
         {
             if (popup)
-                _popup.PopupEntity(Loc.GetString("cm-xeno-reaper-harvest-spent"), xeno, xeno);
+                _popup.PopupEntity(Loc.GetString("cmu-xeno-reaper-harvest-spent"), xeno, xeno);
 
             return false;
         }
@@ -707,7 +707,7 @@ public sealed partial class XenoReaperSystem : EntitySystem
         if (reaper.Comp.FleshResin >= amount)
             return true;
 
-        _popup.PopupEntity(Loc.GetString("cm-xeno-reaper-not-enough-flesh"), reaper, reaper);
+        _popup.PopupEntity(Loc.GetString("cmu-xeno-reaper-not-enough-flesh"), reaper, reaper);
         return false;
     }
 

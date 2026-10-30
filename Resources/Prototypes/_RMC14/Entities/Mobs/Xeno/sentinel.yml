@@ -72,7 +72,7 @@
     - CMXenoQueen
     # Mriya start. Страйн СМУ: Мантикора.
     strains:
-    - RMCXenoSentinelToxic
+    - CMUXenoSentinelToxic
     # Mriya end
   - type: XenoAcid
   - type: XenoParalyzingSlash
